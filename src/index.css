@@ -1,0 +1,164 @@
+:root {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: #1f2937;
+  background: #f5f7fb;
+
+  /* Không để trình duyệt tự chuyển sang dark mode */
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  margin: 0;
+  padding: 0;
+
+  background: #f5f7fb;
+
+  overflow-x: hidden;
+}
+
+/*
+ * QUAN TRỌNG:
+ * #root phải chiếm toàn bộ chiều rộng màn hình.
+ *
+ * Không dùng:
+ * width: 1126px;
+ * max-width: 1280px;
+ * margin: 0 auto;
+ * padding: 2rem;
+ * text-align: center;
+ */
+#root {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  margin: 0;
+  padding: 0;
+
+  display: block;
+
+  text-align: left;
+
+  overflow-x: hidden;
+}
+
+/* Tránh các phần tử lớn hơn viewport */
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Typography mặc định */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* Scrollbar nhẹ và hiện đại */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/*
+ * Đảm bảo các layout của Ant Design
+ * không tạo overflow ngang ngoài ý muốn.
+ */
+.ant-layout {
+  min-width: 0;
+}
+
+.ant-layout-content {
+  min-width: 0;
+}
+
+/*
+ * Table rộng sẽ scroll bên trong chính nó,
+ * không làm toàn bộ trang bị kéo ngang.
+ */
+.ant-table-wrapper {
+  max-width: 100%;
+}
+
+.ant-table-container {
+  max-width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  html,
+  body {
+    min-width: 320px;
+  }
+
+  #root {
+    width: 100%;
+  }
+}
