@@ -1,98 +1,40 @@
-
----
-
-# 2. Web Admin — `README.md`
-
-```markdown
 # 💻 AI Video Generator - Admin Dashboard
-
-Web Admin Dashboard là hệ thống quản trị trung tâm của AI Video Generator.
-
-Hệ thống cho phép administrator quản lý người dùng, Credit, Promo Code, các gói Credit và theo dõi trạng thái hoạt động của hệ thống AI.
-
-Ứng dụng được xây dựng theo mô hình SPA (Single Page Application).
-
+ 
+Cổng thông tin quản trị trung tâm (Web Admin Portal) dành cho người điều hành hệ thống AI Video Generator. Được xây dựng dưới dạng ứng dụng SPA (Single Page Application) hiện đại.
+ 
+## 🚀 Tính năng cốt lõi
+- **Bảng điều khiển (Dashboard):** Thống kê doanh thu, số lượng người dùng mới và giám sát tình trạng (Health Check) của AI Server.
+- **Quản lý Khách hàng:** Theo dõi lịch sử giao dịch, khóa/mở khóa tài khoản (Ban/Unban) và cộng/trừ Credit thủ công.
+- **Chiến dịch Kinh doanh:** Khởi tạo, bật/tắt (Toggle) các gói nạp Credit theo thời gian thực (Real-time sync to Mobile).
+- **Mã Khuyến mãi:** Quản lý số lượng và thời hạn sử dụng của Promo Code.
+- **Thiết kế Chuyên nghiệp:** Layout chia tách chuẩn (Sticky Sidebar không cuộn, Main Content cuộn độc lập) đem lại trải nghiệm cao cấp.
+## 🛠 Ngăn xếp công nghệ (Tech Stack)
+- **Core:** ReactJS, Vite (Build Tool)
+- **UI Framework:** Ant Design (AntD)
+- **Routing:** React Router v6
+- **Networking:** Axios (với cơ chế Interceptors gắn JWT Token)
+## ⚙️ Hướng dẫn cài đặt
+ 
+1. Clone dự án:
+```bash
+   git clone <repo_url>
+```
+ 
+2. Cài đặt các gói phụ thuộc (Dependencies):
+```bash
+   npm install
+```
+ 
+3. Tạo file `.env` ở thư mục gốc để trỏ API về Backend Node.js:
+```env
+   VITE_API_BASE_URL=http://localhost:3000/api
+```
+ 
+4. Chạy môi trường phát triển:
+```bash
+   npm run dev
+```
+ 
 ---
-
-## 🚀 Tính năng
-
-### 📊 Dashboard
-
-- Thống kê tổng quan hệ thống.
-- Theo dõi doanh thu.
-- Theo dõi số lượng người dùng.
-- Theo dõi Credit.
-- Kiểm tra trạng thái hoạt động của AI Server.
-
-### 👥 User Management
-
-Administrator có thể:
-
-- Xem danh sách người dùng.
-- Xem thông tin tài khoản.
-- Xem lịch sử giao dịch.
-- Khóa tài khoản.
-- Mở khóa tài khoản.
-- Cộng Credit thủ công.
-- Trừ Credit thủ công.
-
-### 💳 Credit Package Management
-
-- Tạo Credit Package.
-- Chỉnh sửa Credit Package.
-- Bật / tắt Package.
-- Quản lý giá bán.
-- Đồng bộ Package với Mobile App.
-
-### 🎟 Promo Code
-
-- Tạo Promo Code.
-- Quản lý số lượng sử dụng.
-- Thiết lập thời hạn.
-- Bật / tắt Promo Code.
-- Theo dõi trạng thái Promo Code.
-
-### 🎨 UI / UX
-
-- Responsive Dashboard.
-- Sticky Sidebar.
-- Main Content cuộn độc lập.
-- Giao diện hiện đại.
-- Component-based architecture.
-
----
-
-## 🛠 Tech Stack
-
-| Thành phần | Công nghệ |
-|---|---|
-| Frontend | ReactJS |
-| Build Tool | Vite |
-| UI Framework | Ant Design |
-| Routing | React Router |
-| HTTP Client | Axios |
-| Authentication | JWT |
-| Architecture | SPA |
-
----
-
-## 📁 Project Structure
-
-```text
-src/
-├── components/
-├── layouts/
-├── pages/
-├── services/
-├── hooks/
-├── utils/
-├── routes/
-├── assets/
-├── App.jsx
-└── main.jsx
-
-public/
-
-.env
-package.json
-vite.config.js
+ 
+*Dự án thuộc Hệ sinh thái AI Video Generator.*
